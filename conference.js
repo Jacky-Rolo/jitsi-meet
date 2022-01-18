@@ -2109,6 +2109,12 @@ export default {
         });
 
         room.on(JitsiConferenceEvents.TRACK_ADDED, track => {
+
+          console.log(`=====> track.videoType would be undefined:`, track.videoType, track)
+          setTimeout(() => {
+            console.log(`=====> track.videoType has value after 500ms:`, track.videoType, track)
+          }, 500)
+
             if (!track || track.isLocal()) {
                 return;
             }
