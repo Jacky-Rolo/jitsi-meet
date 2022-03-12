@@ -2125,6 +2125,8 @@ export default {
                 return;
             }
 
+            console.log(`===> `, track.videoType, track.getUsageLabel(), track.getType() )
+
             if (config.iAmRecorder) {
                 const participant = room.getParticipantById(track.getParticipantId());
 
