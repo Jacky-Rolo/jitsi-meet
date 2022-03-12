@@ -2126,6 +2126,9 @@ export default {
             }
 
             console.log(`===> `, track.videoType, track.getUsageLabel(), track.getType() )
+            setTimeout(() => {
+              console.log(`=====> 1s:`, track.videoType, track.getUsageLabel(), track.getType() )
+            }, 1000)
 
             if (config.iAmRecorder) {
                 const participant = room.getParticipantById(track.getParticipantId());
